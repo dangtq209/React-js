@@ -1,39 +1,25 @@
 import React from 'react'
-import Slide from './components/Slide'
-import Button from './components/Button'
+import Large from './components/Large'
+import Small from './components/Small'
 import './App.css'
 
 class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      src: 'images/banner-1.jpg'
+      src: 'images/img-1.jpg'
     }
   }
-  src1 = () => {
+  change = (val) => {
     this.setState({
-      src: 'images/banner-1.jpg'
-    })
-  }
-  src2 = () => {
-    this.setState({
-      src: 'images/banner-2.jpg'
-    })
-  }
-  src3 = () => {
-    this.setState({
-      src: 'images/banner-3.jpg'
+      src: val
     })
   }
   render() {
     return (
-      <div id="slide">
-        <Slide src={this.state.src} />
-        <Button
-          src1={this.src1}
-          src2={this.src2}
-          src3={this.src3}
-        />
+      <div id="products">
+        <Large src={this.state.src} />
+        <Small src={this.state.src} change={this.change} />
       </div>
     )
   }
