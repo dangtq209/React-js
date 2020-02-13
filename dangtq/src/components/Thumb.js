@@ -4,7 +4,7 @@ class Large extends React.Component {
     render() {
         return (
             <div id="large">
-                <img src={this.props.src} alt="" />
+                <img src="images/car.jpg" alt="" />
             </div>
         )
     }
