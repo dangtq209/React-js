@@ -5,23 +5,9 @@
     body{
     font-family:arial;
     font-size:14px;
-    color:#333;
-    height: 1000px;}
+    color:#333;}
 
-    #body{
-        margin-top: 80px;
+    #wrapper{
+        margin-top: 20px;
     }
-
-    #page-404{
-        font-size: 36px;
-        color: #999;
-        text-align: center;
-    }
-    
-    #footer{
-        color:#fff;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-    
-    
+ 
