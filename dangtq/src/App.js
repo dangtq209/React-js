@@ -1,14 +1,21 @@
-import React, { Component } from 'react'
-import Table from './components/Table'
+import React from "react"
+import Time from "./components/Time"
+import Button from "./components/Button"
+import "./App.css"
+import store from './redux-setup/store'
+import { Provider } from 'react-redux'
 
-export default class App extends Component {
-  render() {
-    return (
-      <div id="wrapper" className="container">
-        <h2>Quản lý thành viên</h2>
-        <p>Demo đơn giản về hiển thị danh sách thành viên thông qua việc <b>GET Data API bằng Axios Module</b></p>
-        <Table />
-      </div>
-    )
-  }
+class App extends React.Component {
+    render() {
+        return (
+            <Provider store={store}>
+                <div id="main">
+                    <div id="title">Automatic Timer</div>
+                    <Time />
+                    <Button />
+                </div>
+            </Provider>
+        )
+    }
 }
+export default App
